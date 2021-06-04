@@ -39,5 +39,18 @@ int main(void) {
   }
 }
 
-
-
+float mc_pi(int num_dots)
+{	
+	int num_dots_inside_circle = 0; 
+	for (int i = 1; i <= num_dots; i++)
+	{
+		int x = random();
+		int y = random();
+		if (x*x + y*y <= 1)
+		{
+			num_dots_inside_circle = num_dots_inside_circle + 1;
+		}
+    }
+    printf("%f\n",((num_dots_inside_circle*1.0)/num_dots));
+    return 4*((num_dots_inside_circle*1.0)/num_dots);
+}
